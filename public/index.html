@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101e29" />
+  <meta name="description" content="Understand loan risk in plain language. Enter loan details and view an estimated risk level from the connected model." />
+  <title>Forma — Check Loan Risk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar navigation">
+      <a class="brand" href="#top" aria-label="Forma home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M9 29V11h22M9 20h16M21 11v18" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span><strong>forma<span class="brand-dot">.</span></strong><small>LOAN RISK CHECKER</small></span>
+      </a>
+      <div class="sidebar-divider"></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a href="#top" class="nav-item" data-nav="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>Welcome</a>
+        <a href="#assessment" class="nav-item active" data-nav="assessment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Check a loan<span class="nav-indicator"></span></a>
+        <a href="#how-it-works" class="nav-item" data-nav="methodology"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>How it works</a>
+      </nav>
+      <div class="nav-label nav-label-second">FOR DEVELOPERS</div>
+      <nav class="side-nav" aria-label="Developer navigation">
+        <a href="/docs" class="nav-item" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M15 4v4h4M8 12h8M8 16h6"/></svg>API details<svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 5h9v9M19 5l-10 10"/></svg></a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-bottom">
+        <div class="side-insight"><div class="insight-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 3 4.5 7v5c0 5 3.2 8.1 7.5 9 4.3-.9 7.5-4 7.5-9V7z"/><path d="m9 12 2 2 4-4"/></svg><span>Clear answers, simply.</span></div><p>Enter the details. Get a risk estimate. Understand what the result means.</p></div>
+        <div class="sidebar-meta"><span class="meta-orbit"></span>FORMA STUDIO <span>v1.0</span></div>
+      </div>
+    </aside>
+
+    <div class="content-wrap" id="top">
+      <header class="topbar">
+        <div class="topbar-left"><button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><div class="breadcrumb">Welcome <span>/</span> <strong>Check loan risk</strong></div></div>
+        <div class="topbar-right"><span class="topbar-version">LOAN RISK CHECKER <span class="version-bullet">•</span> 01</span><div class="avatar" title="Forma Studio">F</div></div>
+      </header>
+      <main class="main-content">
+        <section class="hero reveal" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <div class="hero-eyebrow"><span class="pulse-dot"></span> UNDERSTAND LOAN RISK IN MINUTES</div>
+            <h1 id="hero-title">How risky is<br /><em>this loan?</em></h1>
+            <p>Enter a few details about a person and their loan. We'll show an <strong>estimated risk level</strong> and explain what it means.</p>
+            <div class="hero-actions">
+              <a class="hero-main-cta" href="#assessment">Check a loan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
+              <button type="button" class="hero-demo-cta" id="hero-sample-btn">See an example <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></button>
+            </div>
+            <div class="hero-helper"><span class="helper-tick">✓</span> No account needed <span class="hero-helper-separator">·</span> Try it with example details first</div>
+          </div>
+          <div class="hero-art" aria-hidden="true"><div class="art-orbit orbit-outer"></div><div class="art-orbit orbit-inner"></div><div class="art-core"><svg viewBox="0 0 100 100" fill="none"><path d="M26 67V33h48M26 50h38M53 33v34" stroke="#6be6c4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="art-dot art-dot-one"></div><div class="art-dot art-dot-two"></div><div class="art-label art-label-one"><span>YOU ENTER</span><b>10 <small>details</small></b></div><div class="art-label art-label-two"><span>YOU SEE</span><b>01 <small>risk result</small></b></div></div>
+          <div class="hero-grain" aria-hidden="true"></div>
+        </section>
+        <div class="quick-steps reveal" aria-label="How this tool works">
+          <div class="quick-step"><span class="quick-step-num">1</span><span><strong>Add loan details</strong><small>Income, loan and credit history</small></span></div>
+          <span class="quick-arrow" aria-hidden="true">→</span>
+          <div class="quick-step"><span class="quick-step-num">2</span><span><strong>Check the risk</strong><small>One click to run the model</small></span></div>
+          <span class="quick-arrow" aria-hidden="true">→</span>
+          <div class="quick-step"><span class="quick-step-num">3</span><span><strong>Understand the result</strong><small>Clear risk level and percentage</small></span></div>
+        </div>
+        <section class="workspace" id="assessment" aria-labelledby="workspace-title">
+          <div class="workspace-heading reveal">
+            <div><div class="eyebrow">START HERE <span class="eyebrow-line"></span> JUST ONE FORM</div><h2 id="workspace-title">Tell us about the loan</h2><p>Fill in the fields marked *. Don’t know a value? Try the example to see how it works.</p></div>
+            <button type="button" class="outline-button" id="sample-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V6h16v12zM8 10h5m-5 4h8M16 10h.01"/></svg> Use example details</button>
+          </div>
+          <div class="workspace-grid">
+            <div class="forms-column">
+              <div class="form-progress reveal" aria-label="Form completion"><div class="progress-meta"><span><span class="completion-icon">✦</span> YOUR PROGRESS</span><span id="completion-count">0 of 10 filled in</span></div><div class="progress-track" role="progressbar" aria-label="Details filled in" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><div id="form-progress-bar" class="progress-fill"></div></div></div>
+              <div class="example-notice" id="example-notice" hidden role="status"><span class="example-spark">✦</span><span><strong>Example details loaded.</strong> This is a practice application, not a real borrower.</span><button type="button" id="example-clear-btn">Start fresh</button></div>
+              <form id="risk-form" novalidate>
+                <section class="form-section reveal" id="borrower-section" aria-labelledby="borrower-heading"><div class="section-header"><div class="step-symbol">01</div><div><h3 id="borrower-heading">About the person</h3><p>Who is applying for the loan?</p></div><span class="step-detail">4 FIELDS</span></div>
+                  <div class="field-grid">
+                    <div class="field"><label for="person_age">Age <span class="required">*</span></label><div class="input-wrap"><input type="number" id="person_age" name="person_age" placeholder="e.g. 28" min="18" max="100" step="1" required /><span class="input-unit">years</span></div><div class="field-error"></div></div>
+                    <div class="field"><label for="person_income">Yearly income (USD) <span class="required">*</span></label><div class="input-wrap with-prefix"><span class="input-prefix">$</span><input type="number" id="person_income" name="person_income" placeholder="e.g. 65000" min="1" step="any" required /><span class="input-unit">/ year</span></div><div class="field-error"></div></div>
+                    <div class="field"><label for="person_home_ownership">Housing situation <span class="required">*</span></label><div class="select-wrap"><select name="person_home_ownership" id="person_home_ownership" required><option value="" disabled selected>Choose one</option><option value="RENT">Rent</option><option value="OWN">Own the home outright</option><option value="MORTGAGE">Paying a mortgage</option><option value="OTHER">Other</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div><div class="field-error"></div></div>
+                    <div class="field"><label for="person_emp_length">Years employed <span class="required">*</span></label><div class="input-wrap"><input type="number" id="person_emp_length" name="person_emp_length" placeholder="e.g. 5" min="0" step="0.1" required /><span class="input-unit">years</span></div><div class="field-error"></div></div>
+                  </div>
+                </section>
+                <section class="form-section reveal" id="loan-section" aria-labelledby="loan-heading"><div class="section-header"><div class="step-symbol">02</div><div><h3 id="loan-heading">About the loan</h3><p>How much do they want to borrow?</p></div><span class="step-detail">4 FIELDS</span></div>
+                  <div class="field-grid">
+                    <div class="field"><label for="loan_intent">Reason for the loan <span class="required">*</span></label><div class="select-wrap"><select name="loan_intent" id="loan_intent" required><option value="" disabled selected>Select a purpose</option><option value="PERSONAL">Personal</option><option value="EDUCATION">Education</option><option value="MEDICAL">Medical</option><option value="VENTURE">Starting a business</option><option value="HOMEIMPROVEMENT">Home improvement</option><option value="DEBTCONSOLIDATION">Combining existing debts</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div><div class="field-error"></div></div>
+                    <div class="field"><label for="loan_grade">Loan grade <span class="required">*</span></label><div class="select-wrap"><select name="loan_grade" id="loan_grade" required aria-describedby="grade-help"><option value="" disabled selected>Choose A to G</option><option value="A">A — Best grade</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G — Lowest grade</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div><p class="field-hint" id="grade-help">A–G grade given by a lender, not your own guess.</p><details class="field-help"><summary>What if I don't know the grade?</summary><p>This is a rating the lender gives a loan. The model needs it. For a practice run, use the example details instead of guessing.</p></details><div class="field-error"></div></div>
+                    <div class="field"><label for="loan_amnt">Loan amount (USD) <span class="required">*</span></label><div class="input-wrap with-prefix"><span class="input-prefix">$</span><input type="number" id="loan_amnt" name="loan_amnt" placeholder="e.g. 12000" min="1" step="any" required /></div><div class="field-error"></div></div>
+                    <div class="field"><label for="loan_int_rate">Yearly interest rate <span class="required">*</span></label><div class="input-wrap"><input type="number" id="loan_int_rate" name="loan_int_rate" placeholder="e.g. 11.5" min="0" max="100" step="any" required /><span class="input-unit">%</span></div><div class="field-error"></div></div>
+                    <div class="field field-full"><input type="hidden" id="loan_percent_income" name="loan_percent_income" readonly /><div class="derived-explainer"><span class="derived-icon" aria-hidden="true">✓</span><div><strong>We'll do the math for you.</strong><small>We automatically compare the loan amount with yearly income.</small></div><strong class="derived-value" id="ratio-percent">—</strong></div></div>
+                  </div>
+                </section>
+                <section class="form-section reveal" id="history-section" aria-labelledby="history-heading"><div class="section-header"><div class="step-symbol">03</div><div><h3 id="history-heading">Past borrowing</h3><p>A little about their previous experience with credit.</p></div><span class="step-detail">2 FIELDS</span></div>
+                  <div class="field-grid">
+                    <div class="field"><label for="cb_person_default_on_file">Has this person defaulted on a loan before? <span class="required">*</span></label><div class="select-wrap"><select name="cb_person_default_on_file" id="cb_person_default_on_file" required><option value="" disabled selected>Select an option</option><option value="N">No</option><option value="Y">Yes</option></select><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div><p class="field-hint">Default means not repaying a loan as agreed.</p><div class="field-error"></div></div>
+                    <div class="field"><label for="cb_person_cred_hist_length">Years of credit history <span class="required">*</span></label><div class="input-wrap"><input type="number" id="cb_person_cred_hist_length" name="cb_person_cred_hist_length" placeholder="e.g. 6" min="0" max="100" step="1" required /><span class="input-unit">years</span></div><div class="field-error"></div></div>
+                  </div>
+                </section>
+                <div class="form-actions reveal"><div class="action-caption"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><span>This is a model estimate, not a loan approval.<br />Use practice data if you are just exploring.</span></div><div class="action-buttons"><button type="button" id="reset-btn" class="reset-button">Start over</button><button class="primary-button" id="submit-btn" type="submit"><span id="submit-label">See loan risk</span><svg id="submit-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg><span class="button-spinner" id="button-spinner" hidden></span></button></div></div>
+              </form>
+            </div>
+            <aside class="results-column" aria-label="Loan risk result and details">
+              <div class="results-card reveal" id="results-card">
+                <div class="result-topline"><span><span class="tiny-spark">✦</span> YOUR RESULT</span><span class="result-state" id="result-state"><span class="state-dot"></span> READY WHEN YOU ARE</span></div>
+                <div class="meter-area"><div class="meter-container"><svg class="risk-meter" viewBox="0 0 220 220" aria-hidden="true"><circle class="meter-track" cx="110" cy="110" r="91"/><circle class="meter-progress" id="meter-progress" cx="110" cy="110" r="91"/></svg><div class="meter-inner"><span class="meter-caption">CHANCE OF NOT REPAYING</span><div class="meter-value" id="meter-value">—<span class="meter-percent" id="meter-percent"></span></div><span class="meter-foot" id="meter-foot">No result yet</span></div></div></div>
+                <div class="result-message" id="result-message" aria-live="polite" aria-atomic="true"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></div><div><strong id="result-title">Your result will appear here</strong><p id="result-description">Enter the details and click “See loan risk.” We’ll show the estimated risk in plain language.</p></div></div>
+                <details class="threshold-area" id="threshold-area" hidden><summary class="threshold-summary">Why is this marked high or low risk?<span aria-hidden="true">+</span></summary><p class="threshold-explanation">The model marks a loan <strong>higher risk</strong> when its estimated percentage reaches this cutoff:</p><div class="threshold-heading"><span>Model's cutoff</span><strong id="threshold-value">—</strong></div><div class="threshold-scale"><div class="threshold-fill" id="threshold-fill"></div><div class="threshold-marker" id="threshold-marker"></div></div><div class="threshold-labels"><span>0% — Lower estimate</span><span>100% — Higher estimate</span></div></details>
+                <div class="result-divider"></div>
+                <div class="snapshot-heading"><h3>Your details so far</h3><span class="live-tag"><span></span> UPDATES AS YOU TYPE</span></div>
+                <div class="snapshot-list"><div><span>Yearly income</span><strong id="snapshot-income">—</strong></div><div><span>Loan requested</span><strong id="snapshot-loan">—</strong></div><div><span>Loan vs. income</span><strong id="snapshot-ratio">—</strong></div><div><span>Loan grade</span><strong id="snapshot-grade">—</strong></div></div>
+                <div class="result-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>This is only an estimate. It cannot guarantee repayment or make a loan approval decision.</span></div>
+              </div>
+              <div class="connection-card reveal" id="connection-card"><span class="connection-indicator" id="connection-indicator"></span><div><strong id="connection-title">Checking connection</strong><p id="connection-detail">Contacting the prediction service…</p></div><button type="button" id="retry-connection" aria-label="Retry model connection" title="Check connection again"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.65M20 4v6h-6"/></svg></button></div>
+            </aside>
+          </div>
+        </section>
+        <section class="info-section reveal" id="how-it-works" aria-labelledby="info-title"><div class="info-intro"><span class="eyebrow">THE PROCESS</span><h2 id="info-title">Three steps. One clear result.</h2><p>Here’s exactly what happens when you use the checker.</p></div><div class="info-steps"><div><span class="info-number">01 /</span><strong>Add the information</strong><p>Enter the person’s income, loan amount, and credit background.</p></div><div><span class="info-number">02 /</span><strong>Check the risk</strong><p>Our connected prediction model checks the details you entered.</p></div><div><span class="info-number">03 /</span><strong>Understand the result</strong><p>See a higher or lower risk flag and the estimated percentage.</p></div></div></section>
+        <footer class="footer"><span><span class="footer-brand">forma.</span>  Loan risk, explained simply.</span><span>POWERED BY YOUR ML MODEL <span class="footer-sep">·</span> FASTAPI</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span id="toast-message"></span><button type="button" id="toast-close" aria-label="Dismiss notification">×</button></div>
+  <div class="mobile-backdrop" id="mobile-backdrop" hidden></div>
+</body>
+</html>
